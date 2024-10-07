@@ -99,6 +99,17 @@
     </div>
 
     <script>
+        function formatarMoeda(element) {
+            let valor = element.value;
+            valor = valor.replace(/\D/g, "");
+            valor = new Intl.NumerFormat("pt-BR", {
+                style: "currency",
+                Currency: "BRL"
+            }).format(valor / 100);
+            element.value= valor;
+        document.getElementById("massaSalarial").addEventListener("input", function () {
+            formatarMoeda(this);
+        });
         function calcularIndices() {
             // Pegar os valores de input
             const cat = parseFloat(document.getElementById("cat").value) || 0;
