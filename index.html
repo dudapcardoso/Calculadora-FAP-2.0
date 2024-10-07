@@ -47,65 +47,7 @@
 <body>
 
     <h1>Calculadora de Índices FAP</h1>
-     <div class="tabs">
-        <div class="tab active" onclick="showTab('readme')">README</div>
-        <div class="tab" onclick="showTab('calculadora')">Calculadora</div>
-    </div>
-
-    <div id="readme" class="content active">
-        <h2>README</h2>
-        <pre>
-# Calculadora de Fator Acidentário de Prevenção (FAP)
-
-Este projeto é uma calculadora online que permite aos usuários calcular índices relacionados ao Fator Acidentário de Prevenção (FAP), como o Índice de Frequência, Índice de Gravidade, Índice de Custo, Percentis, e o FAP calculado.
-
-## Funcionalidades
-
-- Cálculo dos Índices
-- Formatação automática de valores
-- Controle de rotatividade
-
-## Como utilizar
-
-1. Preencha os dados iniciais, como Comunicação de Acidente de Trabalho (CAT), Auxílio por incapacidade temporária, entre outros.
-2. Clique no botão "Calcular" para obter os índices.
-3. Insira os números de ordem de frequência, gravidade e custo, e clique em "Calcular FAP" para obter o FAP calculado.
-
-## Fórmulas Utilizadas
-
-- **Índice de Frequência**:  
-  \[
-  \text{Índice de Frequência} = \frac{(\text{CAT} + B91 + B92 + B93 + B94)}{\text{Número Médio de Vínculos}} \times 1000
-  \]
-
-- **Índice de Gravidade**:  
-  \[
-  \text{Índice de Gravidade} = \frac{(B91 \times 0,1 + B92 \times 0,3 + B93 \times 0,5 + B94 \times 0,1 + \text{CAT} \times 0,5)}{\text{Número Médio de Vínculos}} \times 1000
-  \]
-
-- **Índice de Custo**:  
-  \[
-  \text{Índice de Custo} = \frac{\text{Valor Total de Benefícios Pagos}}{\text{Massa Salarial}} \times 1000
-  \]
-
-- **Percentis e Cálculo do FAP**:
-  \[
-  \text{Índice Composto} = (0,5 \times \text{Percentil de Gravidade}) + (0,35 \times \text{Percentil de Frequência}) + (0,15 \times \text{Percentil de Custo}) \times 0,02
-  \]
-  \[
-  \text{FAP Calculado} = \text{se}(\text{Índice Composto} \leq 0,5; 0,5; \text{Índice Composto})
-  \]
-
-## Tecnologias Utilizadas
-
-- HTML5
-- CSS3
-- JavaScript
-- GitHub Pages
-    </pre>
-</div>
-
-    <div id="calculadora" class="content">
+    
     <label for="cat">Comunicação de Acidente de Trabalho (CAT):</label>
     <input type="number" id="cat" placeholder="Informe o valor">
 
