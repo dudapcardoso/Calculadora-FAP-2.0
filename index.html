@@ -124,15 +124,11 @@ layout: default
                 <strong>Índice de Frequência:</strong> ${indiceFrequencia.toFixed(4)}<br>
                 <strong>Índice de Gravidade:</strong> ${indiceGravidade.toFixed(4)}<br>
                 <strong>Índice de Custo:</strong> ${indiceCusto.toFixed(4)}
+                <strong>Índice de Custo:
             `;
             // Mostrar campos adicionais para cálculo do FAP
             document.getElementById("camposFap").classList.remove("hidden");
-            const orientacao = document.getElementById("orientacao");
-            if (!orientacao) {
-                const novaOrientacao = document.createElement("p");
-                novaOrientacao.id = "orientacao";
-                novaOrientacao.innerText = "Preencher os Números de Ordem de Frequência, Gravidade e Custo de acordo com o Rol dos respectivos índices do portal fapweb.";
-                document.getElementById("camposFap").insertAdjacentElement('beforebegin', novaOrientacao);
+            
         }
 
         function calcularFap() {
